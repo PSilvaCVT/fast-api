@@ -5,4 +5,4 @@
 * Make a python venv for this project.
 * Install requirements.txt
 * copy `.env.local` to `.env`
-* run `python manage.py runserver 8081`
+* run `python manage.py send_message_command`
