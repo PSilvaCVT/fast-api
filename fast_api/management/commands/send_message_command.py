@@ -1,6 +1,7 @@
 import json
 
 from django.core.management.base import BaseCommand
+from django.db.models.functions.datetime import datetime
 from django_redis import get_redis_connection
 
 
@@ -14,8 +15,12 @@ class Command(BaseCommand):
             json.dumps(
                 dict(
                     chat_id="123",
-                    data="Test send message to websocket through API.",
-                )
+                    data=dict(
+                        time=datetime.now(),
+                        text="Test send message to websocket through API.",
+                    ),
+                ),
+                default=str
             ),
 
         )
