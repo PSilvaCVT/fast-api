@@ -14,7 +14,7 @@ class Command(BaseCommand):
             json.dumps(
                 dict(
                     chat_id="123",
-                    data="Test send message to websocket through Redis.",
+                    data="Test send message to websocket through API.",
                 )
             ),
 
